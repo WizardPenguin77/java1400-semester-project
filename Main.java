@@ -7,7 +7,7 @@ public class Main{
         int userChoice;
 
         System.out.println("Welcome to the BAC Calculator! In a couple minutes we will tell you if you're ready to hit the road or not!\n");
-        System.out.println("Would you like: \n1. Basic calculator (standardized drink amounts) \n2. Advanced calculator? ");
+        System.out.println("Would you like: \n1. Basic calculator (standardized drink amounts) \n2. Advanced calculator ");
         // input mistmatch exception handler
         while (true){
             if (scnr.hasNextInt()){
@@ -160,7 +160,10 @@ public class Main{
 
     //format print statement
     public static void LegalLimit(double BAC){
+        System.out.println("------------------------------------------------------------------------------------------------------------------\n");
         if (BAC > 0.08)  System.out.printf("Your BAC is %.3f%%. You are over the legal limit of 0.08%% and are not fit to drive!\n", BAC);
         else System.out.printf("Your BAC is %.3f%%. You are under the legal limit of 0.08%% and are fit to drive. (But you maybe probably shouldn't.)\n", BAC);
+        System.out.println("\n------------------------------------------------------------------------------------------------------------------");
+
     }
 }
